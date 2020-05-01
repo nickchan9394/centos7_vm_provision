@@ -19,6 +19,10 @@ node default {
     user => $user
   }
   -> class { 'cpp_sdk': }
+  -> class { 'go':
+    user       => $user,
+    go_version => 'go1.14.2.linux-amd64',
+  }
   -> class { 'git': }
 
 }
