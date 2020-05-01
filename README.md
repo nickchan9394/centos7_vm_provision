@@ -6,13 +6,11 @@
 + Enable SMB1 protocol by running the following command [[reference](https://docs.microsoft.com/en-us/virtualization/community/team-blog/2017/20170706-vagrant-and-hyper-v-tips-and-tricks)]:
 
         Enable-WindowsOptionalFeature -Online -FeatureName smb1protocol
-+ Change $user variable on line 3 of default.pp file to the user name will be used.
-+ Run *`vagrant up`*
-+ After provision successfully, run *`vagrant ssh`*, ssh into the virtual machine
-+ Run *`sudo su -`*, switch to *root*
-+ Run *`passwd username`*, to change the password of the user name which set in the default.pp file.
++ Change $user in line 3 and $init_password in line 4 of default.pp to the ones will be used.
++ Run *`vagrant up`*.
++ After provision successfully, run *`vagrant ssh`*, try ssh into the virtual machine.
 + Exit the virtual machine and record the ip address.
-+ Launch *`mstc`* in windows, input the ip address recorded above, then connect to it.
++ Launch *`mstc`* in windows, input the ip address above, then connect to it.
 
 ## Components will be installed:
 + GNOME Desktop
