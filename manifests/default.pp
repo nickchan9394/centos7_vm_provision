@@ -1,12 +1,11 @@
 node default {
 
   $user = 'nick'
+  $init_password = 'nick9394'
 
-  user { $user:
-    ensure     => 'present',
-    managehome => true,
-    shell      => '/bin/bash',
-    gid        => 'wheel'
+  class {'add_user':
+    user     => $user,
+    password => $init_password,
   }
   -> class { 'repositories::epel': }
   -> class { 'repositories::vscode': }
