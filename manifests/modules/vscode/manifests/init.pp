@@ -11,7 +11,9 @@ class vscode(
     user     => 'root',
   }
   -> exec { 'Install VSCode Extensions' :
-    command  => 'code --install-extension ms-vscode.cpptools; code --install-extension ms-vscode.Go',
+    command  => 'code --install-extension ms-vscode.cpptools;\
+                code --install-extension ms-vscode.Go;\
+                code --install-extension msyrus.go-doc',
     path     => '/usr/bin:/usr/sbin:/bin',
     provider => 'shell',
     timeout  => 0,
